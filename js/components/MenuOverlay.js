@@ -100,26 +100,6 @@ export default class MenuOverlay extends BaseComponent {
 	}
 
 	_createInfiniteList() {
-		this.infiniteList = new ArtsInfiniteList(this.element, {
-			direction: 'vertical',
-			listElementsSelector: ':scope > li',
-			matchMedia: this.options.matchMedia,
-			multiLane: false,
-			loop: this.options.loop,
-			autoClone: this.options.loop,
-			scroll: this.options.scroll,
-			plugins: {
-				scroll: {
-					type: this.options.type,
-					preventDefault: true
-				},
-				speedEffect: this.options.speedEffect
-			},
-			focusObserver: {
-				watchListElements: false,
-				debounceTime: 1200
-			},
-		});
 	}
 
 	_getCurrentTopLevelItemIndex() {
